@@ -6,7 +6,7 @@ line console 0
 password Sarturno*Console
 login local
 exit
-banner motd "ATENÇÃO!APENAS O DEPARTAMENTO DE TI DA EMPRESA SARTURNO LTDA.TEM A AUTORIZAÇÃO PARA ACESSAR ESSES EQUIPAMENTO!"
+banner motd "ATENCAO!APENAS O DEPARTAMENTO DE TI DA EMPRESA SARTUNO LTDA.TEM A AUTORIZACAO PARA ACESSAR ESSES EQUIPAMENTO!"
 ip domain-name sarturno.local
 no ip domain-lookup
 crypto key generate rsa general-key modulus 1024
