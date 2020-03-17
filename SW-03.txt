@@ -1,16 +1,16 @@
 enable
 configure terminal
 hostname SW-03
+banner motd "ATENCAO! APENAS O DEPARTAMENTO DE TI DA EMPRESA SARTUNO LTDA. TEM A AUTORIZACAO PARA ACESSAR ESSE EQUIPAMENTO!"
+username sarturnoti privilege 15 secret batata*00
 enable secret Sarturno*Enable
 line console 0
 password Sarturno*Console
 login local
 exit
-banner motd "ATENÇÃO!APENAS O DEPARTAMENTO DE TI DA EMPRESA SARTURNO LTDA.TEM A AUTORIZAÇÃO PARA ACESSAR ESSES EQUIPAMENTO!"
 ip domain-name sarturno.local
 no ip domain-lookup
 crypto key generate rsa general-key modulus 1024
-username sarturnoti privilege 15 secret batata*00
 line vty 0 15
 transport input ssh
 password Sarturno*VTY
@@ -27,7 +27,7 @@ exit
 interface fastethernet 0/1
 description CONECTADA AO PC-05
 exit
-interface fastethernet 0/2 
+interface fastethernet 0/2
 description CONECTADA AO PC-06
 exit
 interface gigabitethernet 0/2
@@ -35,4 +35,3 @@ description CONECTADA A INTERFACE G0/1 DO SW-03
 ip default-gateway 172.16.10.1
 end
 wr
-exit
